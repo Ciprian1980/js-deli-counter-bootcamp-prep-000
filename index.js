@@ -1,7 +1,10 @@
-function takeANumber(lineOfPeople, newPerson){
-  lineOfPeople.push(newPerson);
-return `Welcome, ${newPerson}. You are number ${lineOfPeople.length} in line.`;
-}
+let num = 1;
+function takeANumber(array){
+  array.push(num);
+  num++;
+  return 
+
+
 function  nowServing(lineOfPeople){
   if(lineOfPeople.length === 0){
     return 'There is nobody waiting to be served!';
@@ -17,10 +20,9 @@ function currentLine(lineOfPeople){
   var newLine = 'The line is currently: ';
   var newArray = [];
   for(let i = 0; i < lineOfPeople.length; i++){
-    if(lineOfPeople.length > 0){
-      
+    
       newArray.push((i + 1) + '. '  +  (lineOfPeople[i]));
-    }
+    
   }
   
   return newLine + newArray.join(', ');
